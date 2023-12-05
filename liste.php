@@ -14,8 +14,9 @@ $result = mysqli_query($cnx, "select * from etudiant order by id desc")
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
-<body>
-<table class="table">
+<body class="m-3">
+  <a class="mb-5" href="create.php">ajouter un nouveau etudiant</a>
+<table class="table mt-3">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -23,6 +24,7 @@ $result = mysqli_query($cnx, "select * from etudiant order by id desc")
       <th scope="col">class</th>
       <th scope="col">email</th>
       <th scope="col">tel</th>
+      <th scope="col">photo</th>
       <th scope="col">action</th>
     </tr>
   </thead>
@@ -36,6 +38,7 @@ $result = mysqli_query($cnx, "select * from etudiant order by id desc")
       <td><?=$p['class'] ?></td>
       <td><?=$p['email'] ?></td>
       <td><?=$p['tel'] ?></td>
+      <td><img src="<?=$p['photo'] ?>" width="150" alt=""></td>
       <td><a class="btn btn-danger"  href="del.php?id=<?=$p['id']?>">Supprimer</a>
         <!-- <a class="btn btn-success" href="liste.php?id=<?=$p['id']?>">Consulter</a> -->
         </td>

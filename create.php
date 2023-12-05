@@ -25,6 +25,10 @@
     <label for="exampleInputPassword1" class="form-label">tel</label>
     <input type="numbre" class="form-control" id="tel" name="tel">
   </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">photo</label>
+    <input type="file" class="form-control"  name="photo">
+  </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
